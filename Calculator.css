@@ -1,0 +1,125 @@
+  /* other elements */
+
+  title {
+    display: block;
+    text-align: center;
+    }
+
+    /* title in the section */
+    h2 {
+      font-size: 25px;
+      text-align: left;
+      padding: 20px;
+      margin: 0;
+    }
+
+  
+div {
+    width: 100%;
+    padding: 15px;
+    border: 5px double rgb(43, 36, 36);
+    margin: 0;
+}
+
+
+/*The conbination of two sections, except the aside*/
+.content{
+  float:left;
+  width: 75%;
+}
+
+#sec1 {
+  /* background-color:orange; */
+  font-size: larger;
+  
+}
+
+#sec2 {
+  font-size: larger;
+  background-color:rgba(118, 188, 13, 0.167);
+}
+
+
+/*边栏*/
+aside {
+  background-color:yellow;
+  float:right;
+  width: 20%;
+  border: 5px dotted rgb(136, 134, 134);
+}
+
+
+/* 把内容结合起来 */
+#container:after {
+  content: "";
+  display: table;
+  clear: both;/* Clear floats after the columns */
+}
+
+
+
+  /*nav block style */
+  nav {
+    margin: 10px auto;
+    margin-left: 30;
+    padding: 10px;
+    background-color: #7b93d4;
+    overflow: hidden;
+  }
+
+  /* the bolck of the navbar,因为原版的头条没有右边界 */
+#navbar {
+
+  padding: 5px; /*inner padding of the block */
+  border: 0px groove gray;
+  margin: 0;
+}
+
+  nav ul {
+    list-style-type: none;
+    padding-left: 10cap;
+  }
+  
+  /*li in the nav */
+  nav li {
+    display: inline-block;
+  }
+  
+  /* Set the element in the button of the list */
+  nav li a {
+    width: 130px;
+    height: 30px;
+    background-color: rgba(48, 0, 137, 0.245);
+    border-bottom: 4px solid #000; /* underline of the block, like shadow? */
+    border-radius: 20%; /* The square block is too ugly.. */
+    display: block;
+    color: #fff; /* Text color */
+    text-align: center; /* Center the text horizontally */
+    padding: 20px 10px; /* Add some padding to the buttons */
+    text-decoration: none; /* Remove underlines from words */
+    font-size: large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+  
+  /* Hover color */
+  nav li a:hover {
+    background-color: #ddd; /* Background color on hover */
+    color: #333; /* Text color on hover */
+  }
+  
+  /* Add some spacing between the buttons */
+  nav li + li {
+    margin-left: 50px ;
+  }
+
+  footer {
+    width: 1080px ;
+    height:20px;
+    background-color:grey;
+    padding: 20px;
+  }
+  
+  
+  
+  
+  

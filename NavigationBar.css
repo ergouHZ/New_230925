@@ -1,0 +1,199 @@
+  /* other elements */
+title {
+    display: block;
+    text-align: center;
+    }
+
+body {
+    background-color: rgba(91, 89, 89, 0.1);
+    margin: 0;
+    padding: 0;
+
+  }
+  
+
+    /* title in the section */
+h2 {
+      font-size: 25px;
+      text-align: left;
+      padding: 20px;
+      margin: 0;
+    }
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+#CCL{
+  width: 30px;
+  outline: 2px solid #043972; /* the border of the  icon */
+  padding: 3px;
+  margin: 0px 30px 0px 15px;
+  position: absolute;/* set the position of the icon to make it centered */
+  top: 24px;
+
+}
+  
+div {
+    width: 100%;
+    /* border: 5px double rgb(43, 36, 36); */
+    margin: 0;
+}
+
+.content{
+  margin:1%;
+  padding: 20px;
+  background-color:#fff
+}
+
+/*The conbination of two sections, except the aside*/
+section{
+    float:left;
+    width: 70%;
+}
+
+#atc1 {
+  /* background-color:orange; */
+  font-size: larger;
+;
+}
+
+#atc2 {
+
+  font-size: larger;
+  background-color:rgba(118, 188, 13, 0.167);
+  }
+
+/* 把内容结合起来 */
+#container:after {
+  content: "";
+  display: table;
+  clear: both;/* Clear floats after the columns */
+
+  }
+
+/*边栏*/
+aside {
+  margin:1%;
+  padding: 20px;
+  background-color:rgba(255, 255, 0, 0.296);
+  float:right;
+  width: 22%;
+  /* border: 5px dotted rgb(136, 134, 134); */
+  }
+
+
+  /*nav block style */
+  nav {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    position: fixed; /*I want make the navbar move while scrolling the page */
+    background-color: #9caee1ae;
+    overflow: hidden;
+    white-space: nowrap;  /*prevent the element moving to next line*/
+  }
+
+
+  nav ul {
+    list-style-type: none;
+    padding-left: 10px;
+    
+  }
+  
+  /*li in the nav */
+  nav li {
+    display:inline-block;
+  }
+  
+  /* Set the element in the button of the list */
+  nav li a {
+    width: 90% ;
+    height: 30px,auto;
+    background-color: rgba(10, 111, 200, 0.488);
+    border-bottom: 4px solid #000; /* underline of the block, like shadow? */
+    border-radius: 20%; /* The square block is too ugly.. */
+    display: block;
+    color: #fff; /* Text color */
+    text-align: center; /* Center the text horizontally */
+    padding: 15px 10px; /* Add some padding to the buttons */
+    text-decoration: none; /* Remove underlines from words */
+    font-size: 70%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+  
+  /* Hover color */
+  nav li a:hover {
+    background-color: #ddd; /* Background color on hover */
+    color: #333; /* Text color on hover */
+  }
+  
+  /* Add some spacing between the buttons */
+  nav li + li {
+    margin-left: 20px ;
+  }
+
+
+
+  footer {
+    width: 100% ;
+    height:20px;
+    background-color:rgba(128, 128, 128, 0.275);
+    padding: 20px;
+  }
+  
+  
+
+/* Responsive part */
+@media only screen and (max-width: 400px)/* you can customize the width of devices*/
+{
+  nav{
+    position: relative;
+  }
+
+  nav li {
+    display:list-item;
+  }
+
+  nav li a {
+    width: 120px ;
+    height: 30px,auto;
+    background-color: rgba(10, 111, 200, 0.488);
+    border-bottom: 4px solid #000; /* underline of the block, like shadow? */
+    border-radius: 20%; /* The square block is too ugly.. */
+    display: block;
+    color: #fff; /* Text color */
+    text-align: center; /* Center the text horizontally */
+    padding: 15px 10px; /* Add some padding to the buttons */
+    text-decoration: none; /* Remove underlines from words */
+    font-size: 70%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+
+  nav ul {
+    display: grid;
+    place-items: center; /*centerlize the list */
+  }
+  nav li + li {
+    margin-left: 0px ;
+  }
+  #CCL{position: absolute;/* set the position of the icon to make it at right side */
+    right: 3%;
+    top: 165px;
+  }
+}
+
+@media only screen and (max-width: 800px){
+section{
+  float:none;
+  width: 100%;
+}
+aside{
+  float:none;
+  width: 94%;
+}
+}
+
