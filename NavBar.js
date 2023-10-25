@@ -1,12 +1,11 @@
 function loadPage(pageName) {
-    // Define the content for each subpage
-    var content = {
-        home: 'This is the Home page content.',
-        about: 'This is the About Us page content.',
-        products: 'This is the Our Products page content.',
-        contact: 'This is the Contact Us page content.'
-    };
+    // Hide all content sections
+    document.getElementById('HomeContent').style.display = 'none';
+    document.getElementById('AboutContent').style.display = 'none';
+    document.getElementById('ProductsContent').style.display = 'none';
+    document.getElementById('ContactContent').style.display = 'none';
+    document.getElementById('CalculatorContent').style.display = 'none';
 
-    // Load the content into the "content" div
-    document.getElementById('content').innerHTML = content[pageName];
+    // Show the selected content section
+    document.getElementById(pageName + 'Content').style.display = 'block';
 }

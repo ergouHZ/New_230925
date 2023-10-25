@@ -31,7 +31,7 @@ img {
   width: 30px;
   outline: 2px solid #043972; /* the border of the  icon */
   padding: 3px;
-  margin: 0px 30px 0px 15px;
+  margin: 0px 20px 0px 15px;
   position: absolute;/* set the position of the icon to make it centered */
   top: 24px;
 
@@ -43,32 +43,23 @@ div {
     margin: 0;
 }
 
+
 .content{
   margin:1%;
   padding: 20px;
-  background-color:#fff
+  background-color:#fff;
+  font-size: larger;
 }
 
 /*The conbination of two sections, except the aside*/
 section{
     float:left;
-    width: 70%;
+    width: 68%;
 }
 
-#atc1 {
-  /* background-color:orange; */
-  font-size: larger;
-;
-}
-
-#atc2 {
-
-  font-size: larger;
-  background-color:rgba(118, 188, 13, 0.167);
-  }
 
 /* 把内容结合起来 */
-#container:after {
+.container:after {
   content: "";
   display: table;
   clear: both;/* Clear floats after the columns */
@@ -77,11 +68,11 @@ section{
 
 /*边栏*/
 aside {
-  margin:1%;
+  margin:0.5%;
   padding: 20px;
   background-color:rgba(255, 255, 0, 0.296);
   float:right;
-  width: 22%;
+  width: 25%;
   /* border: 5px dotted rgb(136, 134, 134); */
   }
 
@@ -197,3 +188,25 @@ aside{
 }
 }
 
+
+
+/* ABOUT PAGE PART */
+#AboutContent, #ProductsContent, #CalculatorContent, #ContactContent {
+  display: none;
+}
+
+
+/* PRODUCT PAGE PART */
+
+
+
+/* CALCULATE PAGE PART */
+
+
+
+/* CONTACT PAGE PART */
+.linkedin-badge {
+  /* Add your custom styles to limit the impact of the LinkedIn badge here */
+  max-width: 300px; /* Adjust the maximum width as needed */
+  margin: 0 auto;  /* Center the badge horizontally */
+}
