@@ -182,6 +182,80 @@
 
     <div id="CalculatorContent" class="container">
         <!-- Content for the Calculator page goes here -->
+        <br><br>
+        <section>
+            
+            <article class="content">
+                <h2>Calculator</h2>
+    
+                In the caulculator section, you can choose the hours of services you want. And you may choose the Contries and hours you want to do the consultancy. 
+                <br><br>Please be aware, all the rates are calculateRate based on EUR.
+                <br><br>
+
+                <!-- selection is here, and it has been built by loop in js -->
+                <label for="CRC">Choose your currency：</label>
+                <select id="CurrencySelect" name="CurrencyU" onclick="calculateRate()">
+                </select>
+
+                <br>The compared rates are:
+                <div id="select">
+                    1
+                <!-- see rates selected -->
+                </div>
+                
+
+                <!-- select the level of the service, the functiont is basically the same as rate -->
+                <label for="HRL">Choose your plan：</label>
+                <select id="PlanSelect" name="CurrencyU" onclick="calculateHourly()">
+                    <option value=10>Basic</option>
+                    <option value=20>Standard</option>
+                    <option value=30>Premium</option>
+                </select>
+
+                <br>The Fees hourly are:
+                <div id="selectHourly">
+                    0.0
+                <!-- see rates selected -->
+                </div>
+                
+
+                <!-- input hours number -->
+                <form id="hourinput">
+                    <label for="hours">Consultant Hours:</label><br>
+                    <input type="int" id="hours" name="hours"><br>
+                    <input type="button" id="subButton" value="Submit" onclick="calculateFee()">
+                </form>
+
+
+                <br>The total fee are: (in your currency)
+                <div id="Fee">
+                    0.00
+                <!-- result -->
+                </div>
+                
+                
+                <br><br>
+                <img src="Image/Cyber/Cyber-security.jpg" alt="scene2">
+                
+            </article>
+            <br>
+        </section>
+
+        <aside>
+            <h2>Exchange Rate Table:</h2>
+            <p>(Based on EUR)</p>
+            <div id="time-update">
+                <!-- Display the time that exchange update -->
+            </div>
+            <br>
+            <div id="exchange-rates">
+                <!-- Exchange rates will be displayed here -->
+            </div>
+    
+        </aside>
+    
+
+    <script src="calculator.js"></script>
         
     </div>
 

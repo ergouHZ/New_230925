@@ -1,11 +1,102 @@
-（These are used for selected different content by clicking the button on the navbar, since I don't want to do it in the way of scrolling, I search these codes for using, and I think it's really efficient）
+---------------------1-------------------------
+// this method is to changing the content display directly by changing the display style
 
-fetch(url)
-    .then(response => response.text())
-    .then(content => {
-        // Replace the content of the "container" div with the loaded content
-        document.getElementById('container').innerHTML = content;
-    })
-    .catch(error => {
-        console.error('Error loading page: ' + error);
-    });
+<script>
+    function loadPage(pageName) {
+        // Hide all content sections
+        document.getElementById('HomeContent').style.display = 'none';
+        document.getElementById('AboutContent').style.display = 'none';
+        document.getElementById('ProductsContent').style.display = 'none';
+
+        // Show the selected content section
+        document.getElementById(pageName + 'Content').style.display = 'block';
+    }
+</script>
+
+
+
+---------------------2-------------------------------------
+
+
+//this is for getting the rate from the free api page I found
+
+
+const apiKey = 'YOUR-API-KEY';
+const baseCurrency = 'USD';
+
+// API Endpoint URL
+const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`;
+
+// Function to fetch exchange rates and update the HTML
+function fetchExchangeRates() {
+    fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.result === 'success') {
+                const exchangeRates = data.conversion_rates;
+                const exchangeRatesContainer = document.getElementById('exchange-rates');
+                
+                // Clear previous content
+                exchangeRatesContainer.innerHTML = '';
+
+                // Loop through the exchange rates and display them
+                for (const currency in exchangeRates) {
+                    const rate = exchangeRates[currency];
+                    exchangeRatesContainer.innerHTML += `<p>${currency}: ${rate}</p>`;
+                }
+            } else {
+                console.error('Error fetching exchange rates:', data.error_type);
+            }
+        })
+        .catch((error) => console.error('Fetch error:', error));
+}
+
+// Call the function to fetch and display exchange rates
+fetchExchangeRates();
+
+
+
+
+----------------------3--------------------------
+
+//this is an example that I know how to build an option menu, and then I loop it in js to build currency
+
+Creating a dropdown menu in HTML is typically achieved using the <select> element and <option> elements. Below is a basic example of creating a dropdown menu:
+
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Menu Example</title>
+</head>
+<body>
+    <label for="cars">Select a car brand:</label>
+    <select id="cars" name="car">
+        <option value="volvo">Volvo</option>
+        <option value="bmw">BMW</option>
+        <option value="ford">Ford</option>
+        <option value="audi">Audi</option>
+    </select>
+</body>
+</html>
+
+
+------------------------4------------------------
+
+// I learned how to get value from selection by this example, and get values by our input is kind of the same 
+
+
+
+"value" is an attribute commonly used for form elements such as <input>, <select>, and <textarea> to specify the value that a user has input or selected. This value is typically used to submit user data to a server or for processing with JavaScript.
+
+In JavaScript, you can read the "value" of HTML elements using different methods, depending on the type of element and how you obtain a reference to it. Here are some common examples:
+
+Getting an element reference by its "id" and reading its "value":
+
+javascript
+Copy code
+// Assuming you have an input field or select element with the id "myInput"
+var element = document.getElementById("myInput");
+var value = element.value;
+console.log(value);
