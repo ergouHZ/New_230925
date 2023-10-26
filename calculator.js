@@ -27,7 +27,7 @@ function fetchExchangeRates() {
                 // Loop through the exchange rates and display them in table, and input those into options
                 for (const currency in exchangeRates) {
                     const rate = exchangeRates[currency];
-                    tableRate += `<tr><td>${currency}</td><td> ${rate}</td></tr>`;
+                    tableRate += `<tr><td class="centered-column">${currency}</td><td> ${rate}</td></tr>`;
                     CurrencyUser += `<option value=${rate}>${currency}</option>`;
                 }
                 tableRate += '</table>'; //the end of the table
@@ -62,6 +62,6 @@ function calculateHourly() {
 function calculateFee(){
     let time = document.getElementById("hours");
     let hrs= time.value;
-    document.getElementById('Fee').innerHTML = hrs*rate*hourlyFee;
+    document.getElementById('Fee').innerHTML = (hrs*rate*hourlyFee).toFixed(4);
 }
 
