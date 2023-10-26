@@ -23,7 +23,7 @@ function fetchExchangeRates() {
                 let CurrencyUser = '';
 
                 // Clear previous content and set the beginning of table
-                let tableRate = '<table><tr><th>Rurrency</th><th>Rate</td></tr>';
+                let tableRate = '<table><tr><th>Currency</th><th>Rate</td></tr>';
 
                 // Loop through the exchange rates and display them in table, and input those into options
                 for (const currency in exchangeRates) {
