@@ -1,4 +1,5 @@
 #Introduction
+
 The website I designed offers the service of web design, in the name of WDC, Web Design Consultancy. Since we are learning web design, that I aim to help the client to build the website they want. And this site focuses on giving the consultancy service based on hours value first, we have to figure out what is the objective of the customer.
 And based on the assumption that we have a team of developers and cyber security experts that offer the service to clients who may want to build a start-ups and create their on websites.
 The most difficult and also important part is the calculation. In the calculator page, I set two selection menu for user to choose the currency and the hourly plan rate. And there is also a blank user can fill the hours into it. After clicking the button, the total result will be shown. It’s actually readable and functional
