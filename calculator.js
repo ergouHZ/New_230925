@@ -2,8 +2,8 @@ const baseCurrency = 'EUR'; // set the base currency here
 
     //the free api is limited.....so I can just close that while I am not testing
     //change the url if it is need to be connectted online
-// const apiUrl = `https://v6.exchangerate-api.com/v6/709b6a33ec5b5a011299d8ff/latest/${baseCurrency}`;
-const apiUrl= 'Intro/Rate Data BackUp.txt';
+const apiUrl = `https://v6.exchangerate-api.com/v6/709b6a33ec5b5a011299d8ff/latest/${baseCurrency}`;
+//const apiUrl= 'Intro/Rate Data BackUp.txt';
 
 function fetchExchangeRates() {
 
