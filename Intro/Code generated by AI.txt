@@ -100,3 +100,16 @@ Copy code
 var element = document.getElementById("myInput");
 var value = element.value;
 console.log(value);
+
+
+------------------------5------------------------
+
+// sometimes the the result outcome will overceed the boundary of the blank, so I found this method to set the digits amount after the decimal point.
+
+The toFixed() method is used to format a number with a specific number of digits after the decimal point. It returns a string representation of the number.
+
+javascript
+Copy code
+const number = 3.1415927;
+const fixedNumber = number.toFixed(2); // Sets 2 digits after the decimal point
+console.log(fixedNumber); // Outputs "3.14" as a string
